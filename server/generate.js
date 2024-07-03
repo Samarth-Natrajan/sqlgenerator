@@ -1,9 +1,5 @@
+import {chat,chatprompt} from "./chatgptConfig.js";
 
-
-import dotenv from "dotenv";
-import {chat,chatprompt} from "./chatgptConfig";
-dotenv.config();
-import {ChatPromptTemplate,SystemMessagePromptTemplate,HumanMessagePromptTemplate} from "@langchain/core/prompts"
 const generate = async (queryDescription) => {
 
   // const daVinci = async (queryDescription) => {

@@ -15,7 +15,7 @@ dotenv.config();
 //   apiKey: process.env.OPENAI_API_KEY,
 // });
 // const openai = new OpenAIApi(configuration);
-const chat = new ChatOpenAI({openAIApiKey:process.env.OPENAI_API_KEY})
+  const chat = new ChatOpenAI({openAIApiKey:process.env.OPENAI_API_KEY})
   const systemMessagePrompt = SystemMessagePromptTemplate.fromTemplate(
     "You are an sql query generator. You will get a human generated statement in text form which will be in english describing a problem related to sql queries.Your task is to convert the problem in english language or situation into an sql query.You might also be required to correct a query given by user if it is not correct according to the desired result.If the input to you is out of this domain you should say 'Sorry I do not speciallize in this.I am only aware about sql query generation .'"
   )

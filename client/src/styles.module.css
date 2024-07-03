@@ -22,8 +22,12 @@
 }
 .main {
   display: flex;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding-top: 60px;
 }
 .main .icon {
@@ -64,4 +68,8 @@
 .main .result {
   margin-top: 40px;
   width: 69ch;
+}
+.main pre{
+  width: 100%;
+  overflow: auto;
 }
