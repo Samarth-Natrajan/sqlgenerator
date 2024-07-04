@@ -1,6 +1,6 @@
 # Natural Language to SQL Query Converter
 
-This is a full stack app that converts natural language English to SQL queries using OpenAI's GPT-3.5 architecture and text completion API. The app has a client and a server, each with its own npm packages. 
+This is a full stack app that converts natural language English to SQL queries using OpenAI's GPT-3.5 architecture and LangChain. The app has a client and a server, each with its own npm packages. 
 
 ## Getting Started
 
@@ -35,7 +35,7 @@ The client will be available at http://localhost:3000/.
 To run the server, navigate to the server folder and run the following command:
 
 ```
-npm start
+nodemon start
 ```
 
 ## Technologies
