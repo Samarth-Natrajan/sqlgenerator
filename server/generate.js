@@ -35,7 +35,7 @@ const generate = async (queryDescription) => {
   })
   const response = await chat.invoke(formattedChatPrompt)
   return response.content;
-
+  
 };
 
 export default generate;
