@@ -28,7 +28,7 @@ To run the client, navigate to the client folder and run the following command:
 npm run dev
 ```
 
-The client will be available at http://localhost:3000/.
+The client will be available at http://localhost:5173/.
 
 ## Running the Server
 
