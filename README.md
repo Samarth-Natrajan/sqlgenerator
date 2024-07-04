@@ -35,7 +35,7 @@ The client will be available at http://localhost:3000/.
 To run the server, navigate to the server folder and run the following command:
 
 ```
-npm start
+nodemon start
 ```
 
 ## Technologies
