@@ -1,6 +1,8 @@
 import styles from "./styles.module.css";
 import sqlServer from "./assets/sql-server.png";
 import { useState } from "react";
+// import dotenv from "dotenv";
+// dotenv.config();
 
 export default function App() {
   const [userPrompt, setUserPrompt] = useState("");
@@ -13,7 +15,7 @@ export default function App() {
   };
 
   const generateQuery = async () => {
-    const response = await fetch("http://localhost:3002/generate", {
+    const response = await fetch(`${import.meta.env.VITE_API}/generate`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
