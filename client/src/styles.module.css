@@ -16,7 +16,7 @@
 .main,
 .main textarea {
   font-size: 1rem;
-  line-height: 2.25rem;
+  line-height: 25rem;
   color: #353740;
   font-family: "ColfaxAI", Helvetica, sans-serif;
   margin-bottom: 0.25rem;
@@ -48,7 +48,7 @@
 }
 .main input[type="text"] {
   padding: 0.75rem 1rem;
-  border: 0.63rem solid #10a37f;
+  border: 0.063rem solid #10a37f;
   border-radius: 0.25rem;
   margin-bottom: 1.5rem;
   outline-color: #10a37f;
