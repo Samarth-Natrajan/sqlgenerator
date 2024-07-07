@@ -32,7 +32,7 @@ export default function App() {
       <img src={sqlServer} className={styles.icon} alt="SQL server" />
       <h3>Generate SQL</h3>
       <form onSubmit={onSubmit}>
-        <input
+        <textarea
           type="text"
           name="query-description"
           placeholder="Describe your query"
