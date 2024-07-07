@@ -1,4 +1,3 @@
-import { Configuration, OpenAIApi } from "openai";
 import {ChatPromptTemplate,SystemMessagePromptTemplate,HumanMessagePromptTemplate} from "@langchain/core/prompts"
 import { ChatOpenAI } from "@langchain/openai";
 import dotenv from "dotenv";
@@ -20,7 +19,12 @@ dotenv.config();
     modelName:"gpt-3.5-turbo"
   })
   const systemMessagePrompt = SystemMessagePromptTemplate.fromTemplate(
-    "You are an sql query generator and explainer. You will get a human generated statement in text form which will be in english describing a problem related to sql queries.Your task is to convert the problem in english language or situation into an sql query.You might also be required to correct a query given by user if it is not correct according to the desired result.You might also need to explain the result of a query.If the input to you is out of this domain you should say 'Sorry I do not speciallize in this.I am only aware about sql query generation & correction .'"
+    "You are an SQL query generator and explainer. You will receive a statement in English that describes a problem related to SQL queries. Your tasks are to:"+
+
+"1) Convert the described problem into an appropriate SQL query."+
+"2) Correct any SQL query provided if it does not produce the desired result."+
+"3) Explain the result of a given SQL query"+
+"If the input is outside the domain of SQL query generation, correction, or explanation, respond with: 'Sorry, I do not specialize in this. I am only knowledgeable about SQL query generation, correction, and explanation.'"
   )
   const humanMessagePrompt = HumanMessagePromptTemplate.fromTemplate("{asked_question}");
   const chatprompt = ChatPromptTemplate.fromMessages([
