@@ -6,7 +6,7 @@ dotenv.config();
 const app = express();
 app.use(express.json()); 
 
-const allowedOrigin = process.env.ALLOWED_ORIGIN;
+const allowedOrigin = process.env.ACCESS_ORIGIN;
 
 app.use(cors({ // restricted access to api calls
   origin: function (origin, callback) {
