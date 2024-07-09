@@ -1,17 +1,24 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
+import generate from "./generate.js";
 dotenv.config();
 const app = express();
 app.use(express.json()); 
 
-app.use(cors(
-  { origin: "*" }
-));
+const allowedOrigin = process.env.ALLOWED_ORIGIN;
+
+app.use(cors({ // restricted access to api calls
+  origin: function (origin, callback) {
+    if (origin && origin === allowedOrigin) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  }
+}));
 
 const port = process.env.PORT || 3002;
-
-import generate from "./generate.js";
 
 app.get("/", (req, res) => {
   res.send("Hello World!");
