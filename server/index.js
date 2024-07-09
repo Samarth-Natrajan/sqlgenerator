@@ -13,7 +13,7 @@ app.use(cors({ // restricted access to api calls
     if (origin && origin === allowedOrigin) {
       callback(null, true);
     } else {
-      callback(new Error('Not allowed by CORS'));
+      callback(new Error(`Not allowed by CORS, ${origin}`));
     }
   }
 }));
