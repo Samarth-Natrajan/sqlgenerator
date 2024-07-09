@@ -8,12 +8,13 @@ app.use(express.json());
 
 const allowedOrigin = process.env.ACCESS_ORIGIN;
 
+
 app.use(cors({ // restricted access to api calls
   origin: function (origin, callback) {
     if (origin && origin === allowedOrigin) {
       callback(null, true);
     } else {
-      callback(new Error(`Not allowed by CORS, ${origin}`));
+      callback(new Error(`Not allowed by CORS, ${origin,allowedOrigin}`));
     }
   }
 }));
