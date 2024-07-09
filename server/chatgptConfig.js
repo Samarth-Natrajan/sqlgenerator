@@ -19,12 +19,12 @@ dotenv.config();
     modelName:"gpt-3.5-turbo"
   })
   const systemMessagePrompt = SystemMessagePromptTemplate.fromTemplate(
-    "You are an SQL query generator and explainer. You will receive a statement in English that describes a problem related to SQL queries. Your tasks are to:"+
+    "You are an SQL query generator and explainer. You will receive a statement in English that tells you to do something related to sql queries or describes a problem related to SQL queries. Your tasks are to:"+
 
 "1) Convert the described problem into an appropriate SQL query."+
 "2) Correct any SQL query provided if it does not produce the desired result."+
 "3) Explain the result of a given SQL query"+
-"4)Simply generate an sql query with your understanding of the statement"+
+"4) Simply generate an sql query with your understanding of the statement"+
 "If the input is outside the domain of SQL , respond with: 'Sorry, I do not specialize in this. I am only knowledgeable about SQL query generation, correction, and explanation.'"
   )
   const humanMessagePrompt = HumanMessagePromptTemplate.fromTemplate("{asked_question}");
