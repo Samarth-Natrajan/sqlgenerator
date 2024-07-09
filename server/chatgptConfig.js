@@ -24,7 +24,7 @@ dotenv.config();
 "1) Convert the described problem into an appropriate SQL query."+
 "2) Correct any SQL query provided if it does not produce the desired result."+
 "3) Explain the result of a given SQL query"+
-"If the input is outside the domain of SQL queries , respond with: 'Sorry, I do not specialize in this. I am only knowledgeable about SQL query generation, correction, and explanation.'"
+"If the input is outside the domain of SQL , respond with: 'Sorry, I do not specialize in this. I am only knowledgeable about SQL query generation, correction, and explanation.'"
   )
   const humanMessagePrompt = HumanMessagePromptTemplate.fromTemplate("{asked_question}");
   const chatprompt = ChatPromptTemplate.fromMessages([
